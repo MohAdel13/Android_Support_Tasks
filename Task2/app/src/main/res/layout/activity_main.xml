@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/wpIV"
+        android:layout_width="435dp"
+        android:layout_height="146dp"
+        android:contentDescription="@string/picture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/wallpaper"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageView
+        android:id="@+id/sframeIV"
+        android:layout_width="58dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="12dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_stars_24" />
+
+    <ImageView
+        android:id="@+id/sshapeIV"
+        android:layout_width="42dp"
+        android:layout_height="74dp"
+        android:contentDescription="@string/todo2"
+        app:layout_constraintBottom_toBottomOf="@+id/sframeIV"
+        app:layout_constraintEnd_toEndOf="@+id/sframeIV"
+        app:layout_constraintStart_toStartOf="@+id/sframeIV"
+        app:layout_constraintTop_toTopOf="@+id/sframeIV"
+        app:srcCompat="@drawable/ic_baseline_star_24" />
+
+    <TextView
+        android:id="@+id/titleTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/singapore"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wpIV" />
+
+    <TextView
+        android:id="@+id/cameraTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/camera"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTV" />
+
+    <TextView
+        android:id="@+id/settingsTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/settings"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cameraTV" />
+
+    <EditText
+        android:id="@+id/cameraET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="@string/leica_m_typ_240"
+        app:layout_constraintStart_toEndOf="@+id/cameraTV"
+        app:layout_constraintTop_toBottomOf="@+id/wpIV"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/settingsET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="@string/f_4_16s_iso_200"
+        app:layout_constraintStart_toEndOf="@+id/settingsTV"
+        app:layout_constraintTop_toBottomOf="@+id/cameraET"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/descriptionTV"
+        android:layout_width="358dp"
+        android:layout_height="217dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settingsTV" />
+
+    <Button
+        android:id="@+id/discardBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/discard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/uploadBTN" />
+
+    <Button
+        android:id="@+id/uploadBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/upload"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

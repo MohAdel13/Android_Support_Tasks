@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Layout Codelab</string>
+    <string name="picture">Wallpaper</string>
+    <string name="todo">TODO</string>
+    <string name="todo2">TODO2</string>
+    <string name="singapore">Singapore</string>
+    <string name="camera">Camera</string>
+    <string name="settings">Settings</string>
+    <string name="f_4_16s_iso_200">ƒ/4 16s ISO 200</string>
+    <string name="leica_m_typ_240">Leica M Typ 240</string>
+    <string name="description"><![CDATA[
+        Singapore officially the Republic of Singapore, and often referred to as the Lion City, the Garden City, and the Red Dot, is a global city in Southeast Asia and the world\'s only island city-state. It lies one degree (137 km) north of the equator, at the southernmost tip of continental Asia and peninsular Malaysia, with Indonesia\'s Riau Islands to the south. Singapore\'s territory consists of the diamond-shaped main island and 62 islets.
+    ]]></string>
+    <string name="discard">DISCARD</string>
+    <string name="upload">UPLOAD</string>
+</resources>
