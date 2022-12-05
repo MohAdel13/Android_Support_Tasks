@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Task 3</string>
+    <string name="welcome_fashionista">Welcome Fashionista!</string>
+    <string name="sign_in_to_continue">Sign in to continue</string>
+    <string name="email">EMAIL</string>
+    <string name="password">PASSWORD</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="log_in">Log in</string>
+    <string name="passexample">***********</string>
+    <string name="example123_sweet_com">example123@sweet.com</string>
+    <string name="welcome">Welcome!</string>
+    <string name="todo">TODO</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="start_your_career_with_us">Start your career with us</string>
+    <string name="name">Name</string>
+    <string name="folan_elfolany">Folan Elfolany</string>
+    <string name="sign_up2">Sign up</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="login">Login</string>
+</resources>

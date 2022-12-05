@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/wallpaper"
+    tools:context=".SignUp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="409dp"
+        android:layout_height="470dp"
+        app:cardCornerRadius="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/createTV"
+                android:layout_width="260dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/create_an_account"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/signUpTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/start_your_career_with_us"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/createTV" />
+
+            <EditText
+                android:id="@+id/name_EDT"
+                android:layout_width="335dp"
+                android:layout_height="57dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="16dp"
+
+                android:drawableStart="@drawable/ic_baseline_person_outline_24"
+                android:drawablePadding="15dp"
+                android:ems="10"
+                android:hint="@string/folan_elfolany"
+                android:inputType="textPersonName"
+                android:textColor="@color/grey"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/signUpTV"
+                tools:ignore="SpeakableTextPresentCheck,TextContrastCheck"
+                android:autofillHints="" />
+
+            <TextView
+                android:id="@+id/name_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/name"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/name_EDT"
+                app:layout_constraintTop_toTopOf="@+id/name_EDT" />
+
+            <EditText
+                android:id="@+id/email_EDT"
+                android:layout_width="335dp"
+                android:layout_height="57dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="15dp"
+                android:drawableStart="@drawable/ic_baseline_mail_outline_24"
+                android:drawablePadding="15dp"
+                android:ems="10"
+                android:hint="@string/example123_sweet_com"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/grey"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name_EDT"
+                tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/emailTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/email"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/email_EDT"
+                app:layout_constraintTop_toTopOf="@+id/email_EDT" />
+
+            <EditText
+                android:id="@+id/pass_EDT"
+                android:layout_width="337dp"
+                android:layout_height="58dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="15dp"
+                android:drawableStart="@drawable/lock"
+                android:drawableEnd="@drawable/ic_baseline_visibility_24"
+                android:drawablePadding="15dp"
+                android:ems="10"
+                android:hint="@string/passexample"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                android:textColor="@color/grey"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email_EDT"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/passTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/password"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/pass_EDT"
+                app:layout_constraintTop_toTopOf="@+id/pass_EDT" />
+
+            <Button
+                android:id="@+id/signUp_BTN"
+                android:layout_width="341dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/rounded_button"
+                android:text="@string/sign_up2"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.441"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pass_EDT"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/forgotTV"
+                android:layout_width="177dp"
+                android:layout_height="23dp"
+                android:layout_marginBottom="36dp"
+                android:text="@string/already_have_an_account"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/logIn_BTN"
+                app:layout_constraintHorizontal_bias="0.857"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/logIn_BTN"
+                android:layout_width="158dp"
+                android:layout_height="52dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="@color/white"
+                android:text="@string/login"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
