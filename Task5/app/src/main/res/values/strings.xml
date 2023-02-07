@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="description">description</string>
+    <string name="size">size</string>
+    <string name="brand">brand</string>
+    <string name="model">model</string>
+    <string name="add_new">Add New</string>
+    <string name="brand_">Brand:</string>
+    <string name="add">Add</string>
+</resources>
