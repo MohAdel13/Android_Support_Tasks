@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">RoomDatabase_Task</string>
+    <string name="todo">TODO</string>
+    <string name="todo2">TODO</string>
+    <string name="todo3">TODO</string>
+    <string name="cartype">CarType:</string>
+    <string name="model">Model</string>
+    <string name="price">Price</string>
+    <string name="le">LE</string>
+    <string name="color">Color</string>
+    <string name="type">Type:</string>
+    <string name="model2">Model:</string>
+    <string name="color2">Color:</string>
+    <string name="price2">Price:</string>
+    <string name="save">Save</string>
+    <string name="todo4">TODO</string>
+    <string name="enter_the_new_price">Enter The New Price:</string>
+    <string name="save2">Save</string>
+</resources>

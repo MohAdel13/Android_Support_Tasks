@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -37,6 +38,8 @@ public class AddShoe extends AppCompatActivity {
                 int size = Integer.parseInt(add_sizeTV.getText().toString());
                 ShoeModel s = new ShoeModel(brand,size,model,description);
                 db.insertShoe(s);
+                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
             }
         });
 
