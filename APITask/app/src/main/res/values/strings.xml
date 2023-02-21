@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">API_Task</string>
+    <string name="title">Title:</string>
+    <string name="body">Body:</string>
+</resources>

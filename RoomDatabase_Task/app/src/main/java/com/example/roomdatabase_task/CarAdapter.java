@@ -1,21 +1,16 @@
 package com.example.roomdatabase_task;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.TextView;
+
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.AsyncListDiffer;
+import androidx.appcompat.view.menu.MenuView;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.room.RoomSQLiteQuery;
-import androidx.viewbinding.ViewBinding;
 
 import com.example.roomdatabase_task.databinding.CarItemBinding;
 import com.example.roomdatabase_task.pojo.CarDB;
@@ -28,10 +23,13 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.CarViewHolder>{
     List<CarModel>cars = new ArrayList<>();
     CarItemBinding binding;
     CarDB db;
+
+    View itemView;
     @NonNull
     @Override
     public CarViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         binding = CarItemBinding.inflate(LayoutInflater.from(parent.getContext()),parent,false);
+        itemView = binding.getRoot();
         return new CarViewHolder(binding);
     }
 
@@ -40,7 +38,7 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.CarViewHolder>{
         holder.holderBinding.typeTV.setText(cars.get(position).type);
         holder.holderBinding.modelTV.setText(cars.get(position).model);
         holder.holderBinding.colorTV.setText(cars.get(position).color);
-        holder.holderBinding.priceTV.setText(Float.toString(cars.get(position).price));
+        holder.holderBinding.priceTV.setText(String.valueOf(cars.get(position).price));
     }
     @Override
     public int getItemCount() {
@@ -51,6 +49,11 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.CarViewHolder>{
     {
         this.cars=cars;
     }
+
+    public List<CarModel> getCars() {
+        return cars;
+    }
+
     public class CarViewHolder extends RecyclerView.ViewHolder {
         CarItemBinding holderBinding;
         public CarViewHolder(@NonNull CarItemBinding binding) {
@@ -63,6 +66,15 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.CarViewHolder>{
                     CarModel car = cars.get(getAdapterPosition());
                     new getAsync().execute(car);
                     Intent intent = new Intent(v.getContext(),MainActivity.class);
+                    v.getContext().startActivity(intent);
+                }
+            });
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    EditCarActivity.cars = cars;
+                    Intent intent = new Intent(v.getContext(),EditCarActivity.class);
+                    intent.putExtra("carId",getAdapterPosition());
                     v.getContext().startActivity(intent);
                 }
             });
