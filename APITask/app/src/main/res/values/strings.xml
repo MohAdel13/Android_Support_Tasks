@@ -2,4 +2,6 @@
     <string name="app_name">API_Task</string>
     <string name="title">Title:</string>
     <string name="body">Body:</string>
+    <string name="textview">TextView</string>
+    <string name="userid">UserID:</string>
 </resources>

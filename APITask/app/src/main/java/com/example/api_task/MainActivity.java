@@ -16,6 +16,7 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,21 +33,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         adapter = new PostAdapter(getApplicationContext());
         posts = new ArrayList<>();
-        Call<Response> call = PostClient.getINSTANCE().postInterface.getPosts();
-        call.enqueue(new Callback<Response>() {
+        Call<List<PostModel>> call = PostClient.getINSTANCE().postInterface.getPosts();
+        call.enqueue(new Callback<List<PostModel>>() {
             @Override
-            public void onResponse(Call<Response> call, retrofit2.Response<Response> response) {
-                posts = response.body().getHits();
+            public void onResponse(Call<List<PostModel>> call, Response<List<PostModel>> response) {
+                posts = response.body();
                 adapter.setPosts(posts);
+                binding.postRV.setAdapter(adapter);
+                Toast.makeText(getApplicationContext(),"IamDone",Toast.LENGTH_LONG).show();
             }
 
             @Override
-            public void onFailure(Call<Response> call, Throwable t) {
-                Toast.makeText(MainActivity.this, t.getMessage(), Toast.LENGTH_LONG).show();
+            public void onFailure(Call<List<PostModel>> call, Throwable t) {
+                Toast.makeText(getApplicationContext(),"OnFailure: "+t.getMessage(),Toast.LENGTH_LONG).show();
             }
         });
-        binding.postRV.setAdapter(adapter);
-
-
     }
 }
