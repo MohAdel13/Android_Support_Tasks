@@ -1,42 +1,32 @@
 package com.example.api_task;
 
-import com.google.gson.annotations.SerializedName;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
+@Entity(tableName = "POST_TABLE")
 public class PostModel {
-    int userId;
+    @PrimaryKey
     int id;
-    String title;
-    String body;
-
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public void setBody(String body) {
-        this.body = body;
-    }
-
-    public int getUserId() {
-        return userId;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public String getBody() {
-        return body;
-    }
+    String pageURL;
+    String type;
+    String tags;
+    String previewURL;
+    int previewWidth;
+    int previewHeight;
+    String webformatURL;
+    int webformatWidth;
+    int webformatHeight;
+    String largeImageURL;
+    String fullHDURL;
+    String imageURL;
+    int imageWidth;
+    int imageHeight;
+    int imageSize;
+    int views;
+    int downloads;
+    int likes;
+    int comments;
+    int user_id;
+    String user;
+    String userImageURL;
 }

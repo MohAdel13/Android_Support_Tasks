@@ -1,6 +1,7 @@
 package com.example.api_task;
 
 import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class PostClient {
@@ -10,9 +11,10 @@ public class PostClient {
     public PostClient()
     {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://jsonplaceholder.typicode.com")
+                .baseUrl("https://pixabay.com/api/")
                 .addConverterFactory(GsonConverterFactory.create())
-                .build();
+                .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
+            .build();
         postInterface = retrofit.create(PostInterface.class);
     }
 
