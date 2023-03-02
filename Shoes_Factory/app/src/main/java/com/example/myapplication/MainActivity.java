@@ -10,12 +10,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -31,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
         db=new ShoeDatabaseHelper(this);
-        //shoes = new ArrayList<>();
         shoes = db.getShoes();
         shoeRV = findViewById(R.id.shoeRV);
         shoeAdapter = new ShoeAdapter();
@@ -42,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         newBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(),AddShoe.class);
+                Intent intent = new Intent(view.getContext(), AddShoeActivity.class);
                 startActivity(intent);
             }
         });

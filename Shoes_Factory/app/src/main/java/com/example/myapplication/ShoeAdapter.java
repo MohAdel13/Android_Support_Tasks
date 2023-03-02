@@ -26,7 +26,7 @@ public class ShoeAdapter extends RecyclerView.Adapter<ShoeAdapter.ShoeViewHolder
         holder.shoeModelTV.setText(shoes.get(position).model);
         holder.shoeBrandTV.setText(shoes.get(position).brand);
         holder.shoeDescriptionTV.setText(shoes.get(position).description);
-        holder.shoeSizeTV.setText(shoes.get(position).size);
+        holder.shoeSizeTV.setText(Integer.toString(shoes.get(position).size));
     }
 
     @Override

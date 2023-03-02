@@ -25,8 +25,9 @@ public class ShoeDatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String creationQuery = "CREATE TABLE "+TABLE_NAME+" ( "+COLUMN_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "+
-                COLUMN_BRAND+" TEXT NOT NULL, "+COLUMN_SIZE+" INTEGER NOT NULL, "+
-                COLUMN_DESCRIPTION+" TEXT NOT NULL, "+COLUMN_MODEL+" TEXT NOT NULL )";
+                COLUMN_BRAND+" TEXT NOT NULL, "+COLUMN_SIZE+" INTEGER NOT NULL, "
+                +COLUMN_MODEL+" TEXT NOT NULL, "+
+                COLUMN_DESCRIPTION+" TEXT NOT NULL )";
         db.execSQL(creationQuery);
     }
 
@@ -40,8 +41,8 @@ public class ShoeDatabaseHelper extends SQLiteOpenHelper {
         ContentValues cv = new ContentValues();
         cv.put(COLUMN_BRAND,shoe.brand);
         cv.put(COLUMN_SIZE,shoe.size);
-        cv.put(COLUMN_DESCRIPTION,shoe.description);
         cv.put(COLUMN_MODEL,shoe.model);
+        cv.put(COLUMN_DESCRIPTION,shoe.description);
         db.insert(TABLE_NAME,null, cv);
     }
     public List<ShoeModel> getShoes(){
@@ -53,9 +54,9 @@ public class ShoeDatabaseHelper extends SQLiteOpenHelper {
             do {
                 String shoeBrand = cursor.getString(1);
                 int shoeSize = cursor.getInt(2);
-                String shoeDescription = cursor.getString(3);
-                String shoeModel = cursor.getString(4);
-                ShoeModel shoe = new ShoeModel(shoeBrand,shoeSize,shoeDescription,shoeModel);
+                String shoeModel = cursor.getString(3);
+                String shoeDescription = cursor.getString(4);
+                ShoeModel shoe = new ShoeModel(shoeBrand,shoeSize,shoeModel,shoeDescription);
                 ShoeList.add(shoe);
             }while(cursor.moveToNext());
         }
